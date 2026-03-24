@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powers of Ten — Interactive Scale Explorer — heyman.ai</title>
+    <meta name="description" content="Journey from quarks to the observable universe — 41 orders of magnitude — with an interactive slider. Inspired by the classic 1977 Eames film Powers of Ten.">
+    <meta name="keywords" content="powers of ten, scale of the universe, interactive, quarks, atoms, molecules, cells, bacteria, Earth, solar system, Milky Way, galaxy, observable universe, Eames, science education">
+    <meta property="og:title" content="Powers of Ten — Interactive Scale Explorer">
+    <meta property="og:description" content="From 10⁻¹⁵ meters (quarks) to 10²⁶ meters (the observable universe). 31 scales, AI-generated imagery, smooth transitions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/10+07-earth.jpg">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <!-- SEO: structured content for all 31 scales, hidden visually but indexable -->
+    <noscript>
+        <h1>Powers of Ten — Interactive Scale Explorer</h1>
+        <p>Journey from quarks to the observable universe — 41 orders of magnitude.</p>
+        <h2>10⁻¹⁵ m — Quarks</h2><p>The fundamental building blocks of matter. Three quarks are bound together by gluons to form protons and neutrons.</p>
+        <h2>10⁻¹⁴ m — Atomic Nucleus</h2><p>Protons and neutrons packed into a dense nucleus just femtometers across — 100,000 times smaller than the atom itself.</p>
+        <h2>10⁻¹² m — Inner Atom</h2><p>The space between the nucleus and the electron cloud. This region is almost entirely empty — an atom is mostly nothing.</p>
+        <h2>10⁻¹⁰ m — The Atom</h2><p>One angstrom — the scale of a single atom. Electron probability clouds form the outer boundary.</p>
+        <h2>10⁻⁹ m — Molecules</h2><p>Atoms bonded into molecules. The DNA double helix is about 2 nanometers wide.</p>
+        <h2>10⁻⁸ m — Viruses</h2><p>A virus — neither alive nor dead. Just a shell of protein around a strand of genetic code.</p>
+        <h2>10⁻⁷ m — Wavelength of Light</h2><p>Visible light has wavelengths between 380 and 700 nanometers.</p>
+        <h2>10⁻⁶ m — Bacteria</h2><p>A single bacterium, one micrometer across. Your body hosts trillions of them.</p>
+        <h2>10⁻⁵ m — Living Cells</h2><p>A human red blood cell is about 8 micrometers across. Inside: organelles, mitochondria, the entire machinery of life.</p>
+        <h2>10⁻⁴ m — Hair &amp; Sand</h2><p>A human hair is about 70 micrometers thick. The threshold of what the naked eye can just barely see.</p>
+        <h2>10⁻³ m — Millimeter World</h2><p>The head of a pin. A grain of salt. The smallest features your fingers can feel.</p>
+        <h2>10⁻² m — A Fingertip</h2><p>One centimeter — the width of a fingertip. You can see the whorls of a fingerprint.</p>
+        <h2>10⁻¹ m — A Human Hand</h2><p>Ten centimeters — the span of a hand. The scale at which we interact with the world.</p>
+        <h2>10⁰ m — A Person</h2><p>One meter. A human being. You are here — the measure of all things.</p>
+        <h2>10¹ m — A Picnic in the Park</h2><p>Ten meters. A couple on a blanket in the park. Trees, grass, the warmth of an autumn afternoon in Chicago.</p>
+        <h2>10² m — A City Block</h2><p>One hundred meters. Roads, buildings, parked cars. The scale of daily life.</p>
+        <h2>10³ m — A Neighborhood</h2><p>One kilometer. The grid of streets becomes visible. The skeleton of a city emerges.</p>
+        <h2>10⁴ m — The City</h2><p>Ten kilometers. An entire city — its downtown core, suburbs, and the surrounding countryside.</p>
+        <h2>10⁵ m — A Region</h2><p>One hundred kilometers. Lake Michigan's shoreline curves away. Geography at the regional scale.</p>
+        <h2>10⁶ m — A Continent</h2><p>One thousand kilometers. The Great Lakes, the curve of the coastline. Earth begins to look like a planet.</p>
+        <h2>10⁷ m — Earth from Space</h2><p>Ten thousand kilometers — the diameter of the Earth. The blue marble. Home to eight billion people.</p>
+        <h2>10⁸ m — Earth–Moon System</h2><p>The Moon orbits at 384,000 km. The farthest any human has traveled.</p>
+        <h2>10¹⁰ m — Inner Solar System</h2><p>The orbits of Mercury, Venus, Earth, and Mars — rocky worlds circling an ordinary yellow star.</p>
+        <h2>10¹² m — The Solar System</h2><p>Jupiter, Saturn, Uranus, Neptune — gas giants in the cold outer reaches.</p>
+        <h2>10¹⁴ m — The Oort Cloud</h2><p>About one light-year. A shell of icy debris marking the gravitational edge of our solar system.</p>
+        <h2>10¹⁶ m — Nearby Stars</h2><p>Alpha Centauri, our nearest stellar neighbor, is 4.37 light-years away.</p>
+        <h2>10¹⁸ m — Stellar Neighborhood</h2><p>One hundred light-years. A few hundred stars. Familiar constellations dissolve.</p>
+        <h2>10²⁰ m — The Milky Way</h2><p>Our galaxy — a barred spiral of 200–400 billion stars, 100,000 light-years across.</p>
+        <h2>10²² m — The Local Group</h2><p>The Milky Way, Andromeda, and about 80 smaller galaxies bound together by gravity.</p>
+        <h2>10²⁴ m — Galaxy Supercluster</h2><p>Superclusters — galaxies cluster into filaments and walls separated by immense voids. The cosmic web.</p>
+        <h2>10²⁶ m — The Observable Universe</h2><p>The cosmic horizon — 93 billion light-years across. Every photon that has had time to reach us since the Big Bang.</p>
+    </noscript>
+    <div class="scene"></div>
+
+    <div class="info-overlay">
+        <div class="info-card">
+            <div class="scale-label" id="power-label"></div>
+            <div class="scale-value" id="scale-value"></div>
+            <div class="scale-title" id="scale-title"></div>
+            <div class="scale-desc" id="scale-desc"></div>
+        </div>
+    </div>
+
+    <div class="play-controls">
+        <button class="play-btn" id="play-back">◀ Zoom In</button>
+        <button class="play-btn" id="play-pause">⏸</button>
+        <button class="play-btn" id="play-fwd">Zoom Out ▶</button>
+    </div>
+
+    <div class="slider-bar">
+        <button class="step-btn" id="step-back">◀</button>
+        <span class="power-label">10<sup>-15</sup></span>
+        <input type="range" id="slider" min="0" max="30" value="13">
+        <span class="power-label">10<sup>26</sup></span>
+        <button class="step-btn" id="step-fwd">▶</button>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
