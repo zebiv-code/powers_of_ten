@@ -1,0 +1,15 @@
+{
+  "name": "powers-of-ten",
+  "version": "1.0.0",
+  "description": "Interactive recreation of the classic Powers of Ten film \u2014 quarks to the observable universe.",
+  "author": "Bill Heyman <bill@heyman.ai> (https://billheyman.com)",
+  "license": "MIT",
+  "homepage": "https://zebiv.com/powers-of-ten/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zebiv-code/powers_of_ten/"
+  },
+  "scripts": {
+    "start": "npx serve web -l 3000"
+  }
+}
